@@ -19,8 +19,8 @@
                         <div class="contacts__item">
                             <p>Email</p>
 
-                            <a href="mailto:INFO@GMS-WORLDWIDE.COM" class="contacts__link">
-                                NFO@GMS-WORLDWIDE.COM
+                            <a :href="'mailto:' + email" class="contacts__link">
+                                {{email}}
                             </a>
                             <p>Send Message</p>
                             <a :href="'viber://chat?number=' + viberPhone" class="contacts__link">
