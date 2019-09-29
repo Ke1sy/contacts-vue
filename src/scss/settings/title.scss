@@ -1,0 +1,33 @@
+.title {
+  &--h1 {
+    font-size: 47px;
+
+    @media only screen and (min-width: 640px) {
+      font-size: 56px;
+    }
+
+    @media only screen and (min-width: 1025px) {
+      font-size: 63px;
+    }
+
+    @media only screen and (min-width: 1440px) {
+      font-size: 72px;
+    }
+  }
+
+  &--h2 {
+    font-size: 30px;
+
+    @media only screen and (min-width: 640px) {
+      font-size: 36px;
+    }
+
+    @media only screen and (min-width: 1025px) {
+      font-size: 42px;
+    }
+
+    @media only screen and (min-width: 1440px) {
+      font-size: 48px;
+    }
+  }
+}
