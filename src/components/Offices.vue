@@ -1,21 +1,25 @@
 <template>
     <div class="offices">
-        <div class="offices__left">
-            <div class="title title--h2">Our Offices</div>
-            <div class="tabs">
+        <div class="container container--no-gap">
+            <div class="offices__content">
+                <div class="offices__left">
+                    <div class="title title--h2">Our Offices</div>
+                    <div class="tabs">
                 <span v-for="tab in tabs" :key="tab.id" :class="['tabs__item',{active: currentTab === tab }]"
                       @click="changeActive(tab)">
                     {{tab.city}}
                 </span>
-            </div>
-            <div class="title title--h2 offices__company">{{ currentTab.company }}</div>
-            <p>{{ currentTab.address }}</p>
-            <p>{{ currentTab.index }}</p>
-            <p>{{ currentTab.country }}</p>
-        </div>
-        <div class="offices__right">
-            <div class="map">
-                <my-map :settings="currentTab"></my-map>
+                    </div>
+                    <div class="title title--h2 offices__company">{{ currentTab.company }}</div>
+                    <p>{{ currentTab.address }}</p>
+                    <p>{{ currentTab.index }}</p>
+                    <p>{{ currentTab.country }}</p>
+                </div>
+                <div class="offices__right">
+                    <div class="map">
+                        <my-map :settings="currentTab"></my-map>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
@@ -90,8 +94,11 @@
 <style scoped lang="scss">
     .offices {
         background: #5c5c5c;
-        display: flex;
-        flex-wrap: wrap;
+
+        &__content {
+            display: flex;
+            flex-wrap: wrap;
+        }
 
         &__left,
         &__right {
