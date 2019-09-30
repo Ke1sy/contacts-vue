@@ -54,13 +54,13 @@
     import VueAxios from 'vue-axios'
     import {numeric, required, minLength, email, helpers} from 'vuelidate/lib/validators';
     import VueNoty from 'vuejs-noty'
-    Vue.use(VueAxios, axios)
+    Vue.use(VueAxios, axios);
     Vue.use(Vuelidate);
     Vue.use(VueNoty, {
         timeout: 1500,
         progressBar: true,
         layout: 'bottomRight'
-    })
+    });
 
     const alphaName = helpers.regex('alpha', /^[a-zA-Zа-яА-Я\s-]*$/);
 
@@ -92,7 +92,7 @@
         methods: {
             clearForm() {
                 setTimeout(() => {
-                    [this.name, this.email, this.phone, this.agree] = ['', '', ''];
+                    [this.name, this.email, this.phone] = ['', '', ''];
                     this.$v.$reset();
                 }, 200);
             },

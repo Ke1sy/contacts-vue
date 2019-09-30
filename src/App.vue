@@ -11,12 +11,6 @@ import TopSection from './components/TopSection'
 import Offices from './components/Offices'
 import ContactsForm from './components/ContactUs'
 export default {
-  data() {
-    return {
-      contacts: {
-      }
-    }
-  },
   components: {
     TopSection,
     ContactsForm,
